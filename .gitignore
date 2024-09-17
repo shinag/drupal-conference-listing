@@ -1,0 +1,29 @@
+# Drupal core files
+/core
+/vendor
+
+# Drupal specific
+/sites/default/files
+/sites/default/private
+/sites/*/files
+/sites/*/private
+
+# Composer files
+/composer.lock
+/composer.phar
+
+# IDE and editor settings
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
+
+# OS files
+Thumbs.db
+ehthumbs.db
+
+# Logs and caches
+/logs
+/cache
+/tmp
