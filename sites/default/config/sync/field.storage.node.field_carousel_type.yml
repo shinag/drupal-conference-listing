@@ -1,0 +1,30 @@
+uuid: 8c16a50a-5d9b-4fa9-b64b-eb940324b5ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_carousel_type
+field_name: field_carousel_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: featured_conference
+      label: 'Featured Conference'
+    -
+      value: recommended_conference
+      label: 'Recommended Conference'
+    -
+      value: past_conference
+      label: 'Past Conference'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

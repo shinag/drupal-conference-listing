@@ -1,0 +1,20 @@
+uuid: 660850f0-43ae-4601-bcc3-6823696f52aa
+langcode: en
+status: false
+dependencies:
+  theme:
+    - conferencelisting
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: conferencelisting_page_title
+theme: conferencelisting
+region: content
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

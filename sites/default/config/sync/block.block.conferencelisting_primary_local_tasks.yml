@@ -1,0 +1,22 @@
+uuid: 58db548a-ac6e-499a-bd08-4e2a91774c8f
+langcode: en
+status: false
+dependencies:
+  theme:
+    - conferencelisting
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: conferencelisting_primary_local_tasks
+theme: conferencelisting
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

@@ -1,0 +1,21 @@
+uuid: 122c76e0-fcde-4399-8bfd-a72c8d55c3bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_carousel_type
+    - node.type.conference
+  module:
+    - options
+id: node.conference.field_carousel_type
+field_name: field_carousel_type
+entity_type: node
+bundle: conference
+label: 'Carousel Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

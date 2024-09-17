@@ -1,0 +1,22 @@
+uuid: 1467de51-6e4b-4f0b-9666-7691c40c02c1
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - conferencelisting
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: conferencelisting_content
+theme: conferencelisting
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

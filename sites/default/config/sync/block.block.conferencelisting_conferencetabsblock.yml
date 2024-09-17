@@ -1,0 +1,25 @@
+uuid: 252d61c3-7dd2-488d-900f-d92cd7e31dac
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_navigation
+    - system
+  theme:
+    - conferencelisting
+id: conferencelisting_conferencetabsblock
+theme: conferencelisting
+region: content
+weight: 0
+provider: null
+plugin: conference_tabs_block
+settings:
+  id: conference_tabs_block
+  label: 'Conference Tabs Block'
+  label_display: '0'
+  provider: custom_navigation
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

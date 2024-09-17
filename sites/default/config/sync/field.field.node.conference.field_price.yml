@@ -1,0 +1,23 @@
+uuid: fd8928f7-5041-4b65-8f43-ce128d143c70
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_price
+    - node.type.conference
+id: node.conference.field_price
+field_name: field_price
+entity_type: node
+bundle: conference
+label: Price
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,33 @@
+uuid: 8db15d62-cb1d-4d95-91cd-0eca92b4d6ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_conference_type
+field_name: field_conference_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: management
+      label: Management
+    -
+      value: leadership
+      label: Leadership
+    -
+      value: education
+      label: Education
+    -
+      value: marketing
+      label: Marketing
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

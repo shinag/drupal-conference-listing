@@ -1,0 +1,30 @@
+uuid: 48aff001-9001-45f9-9046-b93d8566ddc7
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:3dfa78d9-68ee-42d9-bbc5-2ecb4cbc5468'
+  module:
+    - block_content
+    - system
+  theme:
+    - conferencelisting
+id: conferencelisting_navigationtabs
+theme: conferencelisting
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:3dfa78d9-68ee-42d9-bbc5-2ecb4cbc5468'
+settings:
+  id: 'block_content:3dfa78d9-68ee-42d9-bbc5-2ecb4cbc5468'
+  label: 'Navigation Tabs'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

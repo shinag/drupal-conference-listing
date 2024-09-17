@@ -1,0 +1,29 @@
+uuid: a1b0c73f-a13c-4aea-b9e2-dfd0cfaa6ccf
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.recommended_conference
+  module:
+    - system
+    - views
+  theme:
+    - conferencelisting
+id: conferencelisting_views_block__recommended_conference
+theme: conferencelisting
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:recommended_conference-block_1'
+settings:
+  id: 'views_block:recommended_conference-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

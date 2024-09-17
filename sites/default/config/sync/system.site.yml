@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
+langcode: en
+uuid: a00c4834-0af1-4980-8170-be92350b5c34
+name: 'Conference Listing'
+mail: shiniagarwal25@gmail.com
+slogan: 'Bringing Top Conferences to Your Fingertips'
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: null
