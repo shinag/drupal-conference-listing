@@ -1,0 +1,21 @@
+{
+  "name": "conferencelisting",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "sass --no-source-map scss/style.scss css/style.css",
+    "watch-css": "sass --watch scss/style.scss css/style.css",
+    "lint": "stylelint 'scss/**/*.scss'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },  
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "postcss-scss": "^4.0.9",
+    "stylelint": "^14.0.0",
+    "stylelint-config-standard": "^25.0.0",
+    "stylelint-scss": "^4.0.0"
+  }
+}

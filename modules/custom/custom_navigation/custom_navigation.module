@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for views_view.
+ */
+function custom_navigation_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
+  $view = $variables['view'];
+  
+  if (
+    ($view->id() === 'featured_conference' || 
+    $view->id() === 'recommended_conference' || 
+    $view->id() === 'past_conference') && 
+    $view->current_display === 'block_1'
+  ) {
+    $suggestions[] = 'views_view__conference_carousel';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for views_view.
+ */
+function custom_navigation_theme_suggestions_views_view_unformatted_alter(array &$suggestions, array $variables) {
+  $view = $variables['view'];
+  
+  if (
+    ($view->id() === 'featured_conference' || 
+    $view->id() === 'recommended_conference' || 
+    $view->id() === 'past_conference') && 
+    $view->current_display === 'block_1'
+  ) {
+    $suggestions[] = 'views_view_unformatted__conference_carousel';
+  }
+}
+
+
+
+

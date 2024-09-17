@@ -1,0 +1,75 @@
+<div class="my-custom-view slick-slider">
+  {% for row in rows %}
+      <div class="conference-card">
+                <div class="conference-image">
+                    {% if row.content['#row']._entity.field_conf_image.entity.uri.value %}
+                      <img src={{ file_url(row.content['#row']._entity.field_conf_image.entity.uri.value) }}>
+                    {% else %}
+                        <div class="image-placeholder">
+                            <p>{{ row.content['#row']._entity.field_title[0].value }}</p>
+                        </div>
+                    {% endif %}
+
+                    {% set price_value = row.content['#row']._entity.field_price[0].value %}
+                    {% if price_value is not empty %}
+                        <div class="conference-price-overlay">
+                            {% if price_value == '0' %}
+                                <span class="conference-price">FREE</span>
+                            {% else %}
+                                <span class="conference-price">₹ {{ price_value }}</span>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="conference-details">
+                    <h4>{{ row.content['#row']._entity.field_title[0].value }}</h4>
+                    <p>
+                    <img src="{{ base_path ~ directory }}/svg/tag.svg" alt="Icon" class="icon-inline"/>
+                    {% if row.content['#row']._entity.field_conference_type[0] is not empty %}
+                    {% set conference_types = row.content['#row']._entity.field_conference_type %}
+                    {% for type in conference_types %}
+                        {{ type.value|capitalize }}{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                    {% endif %}
+                    </p>
+                    <p>
+                    <img src="{{ base_path ~ directory }}/svg/calendar.svg" alt="Icon" class="icon-inline"/>
+                    {{ row.content['#row']._entity.field_conference_date[0].value|date('d-M-Y') }}
+                    </p>
+                    <p>
+                    <img src="{{ base_path ~ directory }}/svg/location.svg" alt="Icon" class="icon-inline"/>
+                    {{ row.content['#row']._entity.field_location[0].value }}
+                    </p>
+                </div>
+                <div class="conference-overlay">
+                    <div class="overlay-content">
+                        <div class="overlay-icon">
+                            <a href="#" aria-label="Like">
+                            <svg width="24px" height="24px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="icomoon-ignore"></g>
+                                <path d="M21.886 5.115c3.521 0 6.376 2.855 6.376 6.376 0 1.809-0.754 3.439-1.964 4.6l-10.297 10.349-10.484-10.536c-1.1-1.146-1.778-2.699-1.778-4.413 0-3.522 2.855-6.376 6.376-6.376 2.652 0 4.925 1.62 5.886 3.924 0.961-2.304 3.234-3.924 5.886-3.924zM21.886 4.049c-2.345 0-4.499 1.089-5.886 2.884-1.386-1.795-3.54-2.884-5.886-2.884-4.104 0-7.442 3.339-7.442 7.442 0 1.928 0.737 3.758 2.075 5.152l11.253 11.309 11.053-11.108c1.46-1.402 2.275-3.308 2.275-5.352 0-4.104-3.339-7.442-7.442-7.442v0z" fill="#000000">
+                                 </path>
+                             </svg>
+                            </a>
+                        </div>
+                        <div class="overlay-icon">
+                            <a href="#" aria-label="Download">
+                          <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 9.5V15.5M12 15.5L10 13.5M12 15.5L14 13.5M8.4 19C5.41766 19 3 16.6044 3 13.6493C3 11.2001 4.8 8.9375 7.5 8.5C8.34694 6.48637 10.3514 5 12.6893 5C15.684 5 18.1317 7.32251 18.3 10.25C19.8893 10.9449 21 12.6503 21 14.4969C21 16.9839 18.9853 19 16.5 19L8.4 19Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            </a>
+                        </div>
+                         <div class="overlay-icon">
+                           <a href="#" aria-label="Share">
+                            <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_15_72)"><circle cx="7" cy="12" r="2" stroke="#000000" stroke-linejoin="round"/><circle cx="17" cy="6" r="2" stroke="#000000" stroke-linejoin="round"/><path d="M15 7L8.5 11" stroke="#000000"/><circle cx="17" cy="18" r="2" stroke="#000000" stroke-linejoin="round"/>
+                                <path d="M8.5 13.5L15 17" stroke="#000000"/></g><defs><clipPath id="clip0_15_72"><rect width="24" height="24" fill="white"/></clipPath></defs>
+                            </svg>
+                            </a>
+                        </div>
+                        <div class="overlay-icon">
+                            <a href="#">View Details</a>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+  {% endfor %}
+</div>

@@ -1,0 +1,6 @@
+custom_tabs_styles:
+  js:
+    js/custom-tabs.js: { }
+  dependencies:
+    - core/jquery
+    - core/drupal

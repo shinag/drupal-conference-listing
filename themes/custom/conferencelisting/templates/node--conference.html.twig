@@ -1,0 +1,21 @@
+<div class="conference-card">
+    <div class="conference-image">
+        {% if content.field_conf_image %}
+            {{ content.field_conf_image }}
+        {% else %}
+            <div class="image-placeholder">
+                <p>{{ content.field_title }}</p>
+            </div>
+        {% endif %}
+    </div>
+    <div class="conference-details">
+        <h3>{{ content.field_title }}</h3>
+        <p>{{ content.field_date }}</p>
+        <p>{{ content.field_location }}</p>
+        {% if content.field_price == '0' %}
+            <span class="conference-price">FREE</span>
+        {% else %}
+            <span class="conference-price">₹ {{ content.field_price }}</span>
+        {% endif %}
+    </div>
+</div>

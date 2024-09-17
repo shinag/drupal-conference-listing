@@ -1,0 +1,7 @@
+name: 'Custom Navigation Tabs'
+type: module
+description: 'Provides a custom block for tab navigation.'
+core_version_requirement: ^9 || ^10
+package: Custom
+dependencies:
+  - block

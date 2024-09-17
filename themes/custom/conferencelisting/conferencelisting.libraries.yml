@@ -1,0 +1,18 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+  js:
+    js/script.js: {}
+
+slick-slider:
+  css:
+    theme:
+      libraries/slick/slick.css: {}
+      libraries/slick/slick-theme.css: {}
+  js:
+    libraries/slick/slick.min.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ruleset name="Custom Ruleset">
+  <description>Custom coding standards</description>
+  <rule ref="Drupal"/>
+  <file>src</file>
+  <file>modules/custom</file>
+  <file>themes/custom</file>
+</ruleset>

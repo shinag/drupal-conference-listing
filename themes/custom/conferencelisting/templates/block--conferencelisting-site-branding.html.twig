@@ -1,0 +1,15 @@
+{# block--conferencelisting-site-branding.html.twig #}
+<div class="site-branding">
+  <div class="site-branding__logo">
+    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+      {% if site_logo %}
+        <img src="{{ site_logo }}" alt="{{ 'Site Logo'|t }}">
+      {% else %}
+        <h1>{{ site_name }}</h1>
+      {% endif %}
+    </a>
+  </div>
+  <div class="site-branding__description">
+    <p>Bringing Top Conferences to Your Fingertips</p>
+  </div>
+</div>
